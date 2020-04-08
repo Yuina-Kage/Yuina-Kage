@@ -6,3 +6,6 @@ require_once('functions.php');
 $dbh = connectDb();
 
 ?>
+
+
+<?
