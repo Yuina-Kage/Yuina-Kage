@@ -8,4 +8,4 @@ $dbh = connectDb();
 ?>
 
 
-<?
+
