@@ -15,7 +15,7 @@ USE personalcolor_app;
 
 
 
-CREATE TABLE diagnoses (
+<!-- CREATE TABLE diagnoses (
 id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 sex TINYINT NOT NULL,
 question_id INT NOT NULL,
@@ -24,7 +24,17 @@ yes_id int,
 no_id int,
 type_id int,
 UNIQUE sex_question_id_index(sex, question_id)
+); -->
+
+CREATE TABLE diagnoses (
+id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+content VARCHAR(255) NOT NULL,
+yes_id int,
+no_id int,
+yes_type_id int,
+no_type_id int
 );
+
 
 
 CREATE table types (
@@ -41,7 +51,7 @@ hair_color VARCHAR(255) NOT NULL
 
 
 
-INSERT INTO diagnoses (id, sex, question_id, content, yes_id, no_id, type_id) VALUES
+<!-- INSERT INTO diagnoses (id, sex, question_id, content, yes_id, no_id, type_id) VALUES
 (1, 0, 1, 'あなたは女性である', 2, 2, NULL),
 (2,	1, 2, '肌の色は色白で透明感がある', 3, 4, NULL),	
 (3,	1, 3, '髪の色は黒または暗めのこげ茶である', 5, 6, NULL),	
@@ -67,7 +77,35 @@ INSERT INTO diagnoses (id, sex, question_id, content, yes_id, no_id, type_id) VA
 (20, 2,	9, '白目と黒目のコントラストがしっかりしている', 8, 6, 5),
 (21, 2,	10, '鮮やかな色の服を着ると服に負けてしまう', 6, 8, 6),
 (22, 2,	11, 'クリアなアイシャドウがなじみにくい', 7, 5, 7),  
-(23, 2,	12, '黒よりもネイビーの方がしっくりくる', 5, 7, 8);
+(23, 2,	12, '黒よりもネイビーの方がしっくりくる', 5, 7, 8); -->
+
+INSERT INTO diagnoses (id, content, yes_id, no_id, yes_type_id, no_type_id) VALUES
+(1, 'あなたは女性である', 2, 13, NULL, NULL),
+(2,	'肌の色は色白で透明感がある', 3, 4, NULL, NULL),	
+(3,	'髪の色は黒または暗めのこげ茶である', 5, 6, NULL, NULL),	
+(4,	'髪の色は黒または暗めのこげ茶である', 7, 8, NULL, NULL),	
+(5,	'ボーダーは細めよりも太めが好き', 9, 10, NULL, NULL),	
+(6, '頬に赤みがでやすい', 10, 9, NULL, NULL),
+(7,	'大柄な模様の服が似合うと言われる', 11, 12, NULL, NULL),	
+(8,	'頬に赤みがでやすい', 12, 11, NULL, NULL),	
+(9,	'白目と黒目のコントラストがしっかりしている', NULL, NULL, 4, 2),
+(10, '鮮やかな色の服を着ると服に負けてしまう', NULL, NULL, 2, 4),
+(11, 'クリアなアイシャドウがなじみにくい', NULL, NULL, 3, 1),
+(12, '黒よりもネイビーの方がしっくりくる', NULL, NULL, 1, 3);
+
+
+INSERT INTO diagnoses (id, content, yes_id, no_id, yes_type_id, no_type_id) VALUES
+(13, '肌の色は色白で透明感がある', 14, 15, NULL, NULL),	
+(14, '髪の色は黒または暗めのこげ茶である', 16, 17, NULL, NULL),	
+(15, '髪の色は黒または暗めのこげ茶である', 18, 19, NULL, NULL),	
+(16, 'ボーダーは細めよりも太めが好き', 20, 21, NULL, NULL),	
+(17, '頬に赤みがでやすい', 21, 20, NULL, NULL),	
+(18, '大柄な模様の服が似合うと言われる', 22, 23, NULL, NULL),	
+(19, '頬に赤みがでやすい', 23, 22, NULL, NULL),
+(20, '白目と黒目のコントラストがしっかりしている', NULL, NULL, 8, 6),
+(21, '鮮やかな色の服を着ると服に負けてしまう', NULL, NULL, 6, 8),
+(22, 'クリアなアイシャドウがなじみにくい', NULL, NULL, 7, 5),  
+(23, '黒よりもネイビーの方がしっくりくる', NULL, NULL, 5, 7);
 
 
 
