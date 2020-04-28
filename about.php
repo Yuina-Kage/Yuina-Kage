@@ -17,6 +17,8 @@
   <p>自分のタイプがどれなのかを探すのが「パーソナルカラー診断」です。</p>
   <img src="images/colorchart.png" alt="カラーチャートの画像"> 
 
+  <!-- brでも？ -->
+
 </body>
 
 </html>

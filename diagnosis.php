@@ -3,22 +3,47 @@
 require_once('config.php');
 require_once('functions.php');
 
+
+$id = $_GET['id'];
+
 $dbh = connectDb();
 
+$sql = 'SELECT * FROM diagnoses WHERE id = :id';
+$stmt = $dbh->prepare($sql);
+$stmt->bindParam(':id', $id, PDO::PARAM_INT);
+$stmt->execute();
 
-if ($sql = "SELECT * FROM diagnoses where id=1") {
+$diagnoses = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-  $id = $_GET['id'];
 
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+  $yes_id = 'yes_id';
+  $no_id = 'no_id';
+
+
+  $sql = 'SELECT * FROM diagnoses WHERE yes_id = :yes_id';
   $stmt = $dbh->prepare($sql);
+  $stmt->bindParam(':yes_id', $yes_id, PDO::PARAM_INT);
   $stmt->execute();
   $diagnoses = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-  } if ("SELECT * FROM diagnoses where id=1 == yes_id=2") {
-      "SELECT * FROM diagnosis.php&id=1";
+
+  $sql = 'SELECT * FROM diagnoses WHERE no_id = :no_id';
+  $stmt = $dbh->prepare($sql);
+  $stmt->bindParam(':no_id', $no_id, PDO::PARAM_INT);
+  $stmt->execute();
+  $diagnoses = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+}
+
+if($yes_id=2) {
+
+}
+
+if($no_id=13){
   
-  } elseif ("SELECT * FROM diagnoses where id=1 == no_id=13") {
-      "SELECT * FROM diagnoses.php&id=13";
 }
 
 
@@ -26,24 +51,10 @@ if ($sql = "SELECT * FROM diagnoses where id=1") {
 
 
 
-  
-  
-  
-  // if ("SELECT * FROM diagnoses where id=1 AND yes_id=2") {
-  //     "SELECT * FROM diagnoses where id=2";
-  //     $stmt = $dbh->prepare($sql);
 
-  // } elseif ("SELECT * FROM diagnoses where id=1") {
-  //   "no_id = 2";
-    
-  // }
 
-  // if ("SELECT * FROM diagnoses where id=1") {
-  //   'yes_id=2' ==  "SELECT * FROM diagnoses where id=1";
-  //   'no_id' == "SELECT * FROM diagnoses where id=13";
-  //   $stmt = $dbh->prepare($sql);
 
-  
+
 
 
 ?>
@@ -66,8 +77,9 @@ if ($sql = "SELECT * FROM diagnoses where id=1") {
       </li>
     <?php endforeach; ?>
 
-    <a href="diagnosis.php&id=1" method="GET"><input type="submit" value="はい"></a>
-    <a href="diagnosis.php&id=13" method="GET"><input type="submit" value="いいえ"></a>
+
+    <a href="diagnosis.php&id=<?php echo $yes_id; ?>">はい</a>
+    <a href="diagnosis.php&id=<?php echo $no_id; ?>">いいえ</a>
 </body>
 
 </html>

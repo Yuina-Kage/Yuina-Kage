@@ -38,7 +38,7 @@ $types = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <?php echo h($type['hair_color']); ?><br>
       </li>
     <?php endforeach; ?>
-
+    
     <img src="images/woman_type.jpg" alt="女性のタイプの画像">
     <img src="images/man_type.jpg" alt="男性のタイプの画像">
 </body>
