@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>パーソナルカラーについて</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -14,7 +15,10 @@
   <p>お肌の色にマッチし、瞳の輝きがでて元気に見える、お顔がシャープに見える色。お肌の色ムラなどを隠してくれる捕色となる色のことです。</p>
   <p>パーソナルカラーは、「スプリング(春)」「サマー(夏)」「オータム(秋)」「ウィンター(冬)」の4つの四季のタイプに分けることができ、</p>
   <p>自分のタイプがどれなのかを探すのが「パーソナルカラー診断」です。</p>
-  
+  <img src="images/colorchart.png" alt="カラーチャートの画像"> 
+
+  <!-- brでも？ -->
+
 </body>
 
 </html>
