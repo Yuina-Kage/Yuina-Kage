@@ -56,6 +56,8 @@ if($yes_type_id = 1){
     <img src="images/woman_type.jpg" alt="女性のタイプの画像">
     <img src="images/man_type.jpg" alt="男性のタイプの画像">
 
+    <a href="index.php">メインページへ</a>
+
 
 </body>
 
