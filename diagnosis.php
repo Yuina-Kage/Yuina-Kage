@@ -20,6 +20,25 @@ $diagnosis = $stmt->fetch(PDO::FETCH_ASSOC);
 
 
 
+
+$yes_id = NULL;
+$no_id = NULL;
+
+if (is_null($yes_id)) {
+  $yes_type_id = $_GET['yes_type_id'];
+}else{
+  $yes_id = $_GET['yes_id'];
+}
+
+if(is_null($no_id)) {
+  $no_type_id = $_GET['no_type_id'];
+}else{
+  $no_id = $_GET['no_id'];
+}
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -37,7 +56,7 @@ $diagnosis = $stmt->fetch(PDO::FETCH_ASSOC);
     <a href="diagnosis.php?id=<?php echo h($diagnosis['yes_id']); ?>">はい</a>
     <a href="diagnosis.php?id=<?php echo h($diagnosis['no_id']); ?>">いいえ</a>
   </p>
-  
+
     <a href="result.php?id=<?php echo h($diagnosis['yes_type_id']); ?>"></a>
     <a href="result.php?id=<?php echo h($diagnosis['no_type_id']); ?>"></a>
 </body>

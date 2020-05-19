@@ -17,6 +17,9 @@
     <!-- または、メインページのアイコン押すとそのままとぶ
     このページいらないかもね -->
   </ul>
+
+  <img src="images/woman_type.jpg" alt="女性のタイプの画像">
+  <img src="images/man_type.jpg" alt="男性のタイプの画像">
 </body>
 
 </html>
