@@ -6,15 +6,14 @@ require_once('functions.php');
 $dbh = connectDb();
 
 $id = $_GET['id'];
-
+$yes_type_id = $_GET['yes_type_id'];
+$no_type_id = $_GET['no_type_id'];
 
 $sql = 'SELECT * FROM types WHERE id = :id';
 $stmt = $dbh->prepare($sql);
 $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 $stmt->execute();
 $type = $stmt->fetch(PDO::FETCH_ASSOC);
-
-
 
 ?>
 
@@ -39,7 +38,6 @@ $type = $stmt->fetch(PDO::FETCH_ASSOC);
   <?php echo h($type['eye_color']); ?><br>
   <h3>髪色</h3>
   <?php echo h($type['hair_color']); ?><br> </h2>
-
 
   <a href="result.php?id=<?php echo h($type['id']); ?>"></a>
   <a href="index.php">メインページへ</a>
