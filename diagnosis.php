@@ -5,12 +5,6 @@ require_once('functions.php');
 
 
 $id = $_GET['id'];
-$yes_id = $_GET['yes_id'];
-$no_id = $_GET['no_id'];
-$yes_type_id = $_GET['yes_type_id'];
-$no_type_id = $_GET['no_type_id'];
-
-
 
 $dbh = connectDb();
 
@@ -36,28 +30,28 @@ $diagnosis = $stmt->fetch(PDO::FETCH_ASSOC);
   <h2><?php echo h($diagnosis['content']); ?></h2>
 
   
-  <?php if (is_null($yes_type_id)) : ?>
+  <?php if (is_null($diagnosis['yes_type_id'])) : ?>
     <a href="diagnosis.php?id=<?php echo h($diagnosis['yes_id']); ?>">はい</a>
   <?php else : ?>
     <a href="result.php?id=<?php echo h($diagnosis['yes_type_id']); ?>"></a>
   <?php endif; ?>
 
-  <?php if (is_null($no_type_id)) : ?>
+  <?php if (is_null($diagnosis['no_type_id'])) : ?>
     <a href="diagnosis.php?id=<?php echo h($diagnosis['no_id']); ?>">いいえ</a>
   <?php else : ?>
     <a href="result.php?id=<?php echo h($diagnosis['no_typeid']); ?>"></a>
   <?php endif; ?>
 
 
-  <?php if (is_null($yes_id)) : ?>
-    <a href="result.php?id=<?php echo h($diagnosis['yes_type_id']); ?>"></a>
+  <?php if (is_null($diagnosis['yes_id'])) : ?>
+    <a href="result.php?id=<?php echo h($diagnosis['yes_type_id']); ?>">はい</a>
   <?php else : ?>
     <a href="diagnosis.php?id=<?php echo h($diagnosis['yes_id']); ?>"></a>
   <?php endif; ?>
 
 
-  <?php if (is_null($no_id)) : ?>
-    <a href="result.php?id=<?php echo h($diagnosis['no_type_id']); ?>"></a>
+  <?php if (is_null($diagnosis['no_id'])) : ?>
+    <a href="result.php?id=<?php echo h($diagnosis['no_type_id']); ?>">いいえ</a>
   <?php else : ?>
     <a href="diagnosis.php?id=<?php echo h($diagnosis['no_id']); ?>"></a>
   <?php endif; ?>

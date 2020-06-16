@@ -6,8 +6,6 @@ require_once('functions.php');
 $dbh = connectDb();
 
 $id = $_GET['id'];
-$yes_type_id = $_GET['yes_type_id'];
-$no_type_id = $_GET['no_type_id'];
 
 $sql = 'SELECT * FROM types WHERE id = :id';
 $stmt = $dbh->prepare($sql);
