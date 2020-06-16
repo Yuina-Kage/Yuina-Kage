@@ -5,10 +5,6 @@ require_once('functions.php');
 
 
 $id = $_GET['id'];
-$yes_id = $_GET['yes_id'];
-$no_id = $_GET['no_id'];
-
-
 
 $dbh = connectDb();
 
@@ -17,7 +13,6 @@ $stmt = $dbh->prepare($sql);
 $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 $stmt->execute();
 $diagnosis = $stmt->fetch(PDO::FETCH_ASSOC);
-
 
 
 ?>
@@ -33,13 +28,51 @@ $diagnosis = $stmt->fetch(PDO::FETCH_ASSOC);
 
 <body>
   <h2><?php echo h($diagnosis['content']); ?></h2>
-  <p>
-    <a href="diagnosis.php?id=<?php echo h($diagnosis['yes_id']); ?>">はい</a>
-    <a href="diagnosis.php?id=<?php echo h($diagnosis['no_id']); ?>">いいえ</a>
-  </p>
+
   
+  <?php if (is_null($diagnosis['yes_type_id'])) : ?>
+    <a href="diagnosis.php?id=<?php echo h($diagnosis['yes_id']); ?>">はい</a>
+  <?php else : ?>
     <a href="result.php?id=<?php echo h($diagnosis['yes_type_id']); ?>"></a>
-    <a href="result.php?id=<?php echo h($diagnosis['no_type_id']); ?>"></a>
+  <?php endif; ?>
+
+  <?php if (is_null($diagnosis['no_type_id'])) : ?>
+    <a href="diagnosis.php?id=<?php echo h($diagnosis['no_id']); ?>">いいえ</a>
+  <?php else : ?>
+    <a href="result.php?id=<?php echo h($diagnosis['no_typeid']); ?>"></a>
+  <?php endif; ?>
+
+
+  <?php if (is_null($diagnosis['yes_id'])) : ?>
+    <a href="result.php?id=<?php echo h($diagnosis['yes_type_id']); ?>">はい</a>
+  <?php else : ?>
+    <a href="diagnosis.php?id=<?php echo h($diagnosis['yes_id']); ?>"></a>
+  <?php endif; ?>
+
+
+  <?php if (is_null($diagnosis['no_id'])) : ?>
+    <a href="result.php?id=<?php echo h($diagnosis['no_type_id']); ?>">いいえ</a>
+  <?php else : ?>
+    <a href="diagnosis.php?id=<?php echo h($diagnosis['no_id']); ?>"></a>
+  <?php endif; ?>
+
+
+
+  <?php
+  echo ("<br>");
+  echo ("<br>yes_type_id : ");
+  var_dump(h($diagnosis['yes_type_id']));
+  echo ("<br>no_type_id : ");
+  var_dump(h($diagnosis['no_type_id']));
+  echo ("<br>yes_id : ");
+  var_dump(h($diagnosis['yes_id']));
+  echo ("<br>no_id : ");
+  var_dump(h($diagnosis['no_id']));
+  echo ("<br>is_null(\$yes_id) : ");
+  var_dump(is_null($yes_id));
+  ?>
+
+
 </body>
 
 </html>

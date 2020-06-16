@@ -6,9 +6,6 @@ require_once('functions.php');
 $dbh = connectDb();
 
 $id = $_GET['id'];
-$yes_type_id = $_GET['yes_type_id'];
-$no_type_id = $_GET['no_type_id'];
-
 
 $sql = 'SELECT * FROM types WHERE id = :id';
 $stmt = $dbh->prepare($sql);
@@ -16,14 +13,6 @@ $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 $stmt->execute();
 $type = $stmt->fetch(PDO::FETCH_ASSOC);
 
-
-if($yes_type_id = 1){
-  $sql = 'SELECT * FROM types WHERE id = 1';
-  $stmt = $dbh->prepare($sql);
-  $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-  $stmt->execute();
-  $type = $stmt->fetch(PDO::FETCH_ASSOC);
-}
 ?>
 
 <!DOCTYPE html>
@@ -37,26 +26,19 @@ if($yes_type_id = 1){
 </head>
 
 <body>
-  <ul>
-    <?php foreach ($types as $type) : ?>
-      <li>
-        <?php echo h($type['type']); ?><br>
-        <?php echo h($type['image']); ?><br>
-        <?php echo h($type['subtitle']); ?><br>
-        <?php echo h($type['body']); ?><br>
-        <?php echo h($type['skin_color']); ?><br>
-        <?php echo h($type['eye_color']); ?><br>
-        <?php echo h($type['hair_color']); ?><br>
-      </li>
-    <?php endforeach; ?>
+  <h1><?php echo h($type['type']); ?></h1><br>
+  <img src="<?php echo h('images/' . $type['image']); ?>"><br>
+  <h2><?php echo h($type['subtitle']); ?></h2><br>
+  <?php echo h($type['body']); ?><br>
+  <h3>肌色</h3>
+  <?php echo h($type['skin_color']); ?><br>
+  <h3>瞳の色</h3>
+  <?php echo h($type['eye_color']); ?><br>
+  <h3>髪色</h3>
+  <?php echo h($type['hair_color']); ?><br> </h2>
 
-    <a href="result.php?id=<?php echo h($diagnosis['id']); ?>"></a>
-    <a href="result.php?id=<?php echo h($diagnosis['id']); ?>"></a>
-
-    <img src="images/woman_type.jpg" alt="女性のタイプの画像">
-    <img src="images/man_type.jpg" alt="男性のタイプの画像">
-
-
+  <a href="result.php?id=<?php echo h($type['id']); ?>"></a>
+  <a href="index.php">メインページへ</a>
 </body>
 
 </html>
