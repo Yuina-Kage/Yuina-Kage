@@ -29,8 +29,8 @@ $dbh = connectDb();
     </ul>
     <header class="pc-header">
       <li><a href="about.php">パーソナルカラーとは</a></li>
-      <li><a href="result.php">女性のタイプ</a></li>
-      <li><a href="result.php">男性のタイプ</a></li>
+      <li><a href="woman.php">女性のタイプ</a></li>
+      <li><a href="man.php">男性のタイプ</a></li>
       <li><a href="diagnosis.php?id=1">診断スタート</a></li>
       <li><a href="post.php">Twitter</a></li>
     </header>
