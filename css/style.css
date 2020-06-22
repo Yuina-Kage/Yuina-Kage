@@ -1,12 +1,170 @@
 @charset "utf-8";
 
+/* index.phpの黒点はずす */
+.pc-header li {
+  list-style: none;
+}
+
+/* about.php */
+.about2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about {
+  display: flex;
+}
+
+.about-img {
+  width: 50%;
+  height: 50%;
+}
+
+/* 男女.PHP */
 img {
   width: 100%;
   margin-bottom: 30px;
 }
 
-
-.pc-header li {
-  list-style: none;
+.container h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.container h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 女性phpのCSS */
+.woman {
+  width: 70%;
+  height: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.woman-spring {
+  display: flex;
+}
+
+.woman-summer {
+  display: flex;
+}
+
+.woman-autumn {
+  display: flex;
+}
+
+.woman-winter {
+  display: flex;
+}
+
+/* 男性phpのCSS */
+.man {
+  width: 70%;
+  height: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.man-spring {
+  display: flex;
+}
+
+.man-summer {
+  display: flex;
+}
+
+.man-autumn {
+  display: flex;
+}
+
+.man-winter {
+  display: flex;
+}
+
+/* 診断 diagnosis.php */
+.diagnosis {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  font-size: 60px;
+}
+
+.yes-no {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  font-size: 60px;
+}
+
+/* result.php */
+.result-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-img {
+  width: 50%;
+  height: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.result-subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-body {
+  margin-left: 350px;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  background-color: ivory;
+  border: 1px solid #ebccd1;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.color {
+}
+
+.result-skincolor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-eyecolor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-haircolor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
