@@ -1,170 +1,995 @@
 @charset "utf-8";
 
-/* index.phpの黒点はずす */
-.pc-header li {
+/* index.php */
+/* 花のヘッダー */
+.flower {
+  background: -moz-linear-gradient(to bottom,pink,rgb(245, 196, 204) 30%,#FFF); 
+  background: -webkit-linear-gradient(to bottom,pink,rgb(245, 196, 204) 30%,#FFF); 
+  background: linear-gradient(to bottom,pink,rgb(245, 196, 204) 30%,#FFF); 
+}
+
+/* 題名 */
+.header h1 {
+  text-align: center;
+  font-size: 70px;
+}
+
+.header h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+/* 背景の余白なくし */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* 背景 */
+.main {
+  background-image: url("../images/back-color.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 110vh;
+  margin-top: 50px;
+  text-align: center;
+  position: relative; /*リボンの配置に必要*/
+} 
+
+/* 決め言葉 */
+.main p {
+  font-size: 20px;
+  padding-top: 80px;
+  color: #65513f;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+}
+
+/* 決め言葉のチェックマーク */
+.check {
+  position: relative;
+}
+
+.check::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: .2em;
+  left: -1em;
+  width: 14px;
+  height: 7px;
+  border-left: 2px solid #3498db;
+  border-bottom: 2px solid #3498db;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* WEB診断ボタン */
+.main a {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  outline: 0;
+  overflow: hidden;
+  color: white;/* 文字の色 */
+  background: -moz-linear-gradient(45deg, #ff9a9e 0%, #f0b77f 99%, #fad0c4 100%);
+  background: -webkit-linear-gradient(45deg, #ff9a9e 0%, #f0b77f 99%, #fad0c4 100%);
+  background: linear-gradient(45deg, #ff9a9e 0%, #f0b77f 99%, #fad0c4 100%);/* 背景グラデーション */
+  box-shadow: 0 1px 1px 2px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: .5em 1em;
+  margin-top: 50px;
+  font-size: 40px;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+  }
+
+
+
+/* リボン調整 */
+.ribbon {
+  position: absolute; 
+  right: -2px;
+  margin-top: 120px;
+}
+
+/* フッダーボタン 3種 */
+.button {
+  display: flex;
+  margin-top: 30px;
+  margin-left: 230px;
+  padding: 25px;
   list-style: none;
 }
 
+.button li {
+  text-align: center;
+}
+
+.button a {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  outline: 0;
+  overflow: hidden;
+  color: white;/* 文字の色 */
+  background: -moz-linear-gradient(45deg, #ff9a9e 0%, #f0b77f 99%, #fad0c4 100%);
+  background: -webkit-linear-gradient(45deg, #ff9a9e 0%, #f0b77f 99%, #fad0c4 100%);
+  background: linear-gradient(45deg, #ff9a9e 0%, #f0b77f 99%, #fad0c4 100%);/* 背景グラデーション */
+  box-shadow: 0 1px 1px 2px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: .5em 1em;
+  font-size: 20px;
+  margin-left: 75px;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+}
+
+/* 花のフッダー */ 
+.flower2 {
+  background: -moz-linear-gradient(to bottom,#FFF,rgb(245, 196, 204) 30%,pink); 
+  background: -webkit-linear-gradient(to bottom,#FFF,rgb(245, 196, 204) 30%,pink); 
+  background: linear-gradient(to bottom,#FFF,rgb(245, 196, 204) 30%,pink);
+  margin: 0px;/*一番下の隙間*/
+  padding: 0px;/*一番下の隙間*/
+  vertical-align: bottom;/*一番下の隙間*/
+}
+
+
 /* about.php */
-.about2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* 題名 */
+.header2 h1 {
+  text-align: center;
+  font-size: 50px;
 }
 
+.header2 h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+/* 背景*/
 .about {
-  display: flex;
+  background-image: url("../images/back-color.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 70vh;
+  margin-top: 60px;
+  text-align: center;
 }
 
-.about-img {
-  width: 50%;
-  height: 50%;
+.about h2 {
+  padding-top: 50px;
+  color: #65513f;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
 }
 
-/* 男女.PHP */
+/* 説明文 */
+.about p {
+  font-size: 20px;
+  line-height: 60px;
+  margin-top: 50px;
+  color: #65513f;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+}
+
+/* 説明文のカラー */
+.c1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.c2 {
+  font-weight: bold;
+}
+
+.c3 {
+  color:rgb(223, 93, 76);
+  font-weight: bold;
+}
+
+.c4 {
+  color: rgb(97, 187, 190);
+  font-weight: bold;
+}
+
+.c5 {
+  color: rgb(223, 156, 57);
+  font-weight: bold;
+}
+
+.c6 {
+  color:rgb(219, 54, 156);
+  font-weight: bold;
+}
+
+.c7 {
+  font-weight: bold;
+}
+
+/* HOMEに戻るボタン */
+.button2 {
+  text-align: right;
+  padding: 20px;
+}
+
+.PAGE-HOME {
+  display: inline-block;
+  max-width: 180px;
+  text-align: left;
+  border: 2px solid palevioletred;
+  font-size: 16px;
+  color: #65513f;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: .4s;
+}
+
+.PAGE-HOME:hover {
+  background-color: palevioletred;
+  border-color: rgb(235, 163, 231);
+  color: white;
+}
+
+/* もう一度診断ボタン */
+.start {
+  display: inline-block;
+  max-width: 180px;
+  text-align: left;
+  border: 2px solid palevioletred;
+  font-size: 16px;
+  color: #65513f;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: .4s;
+}
+
+.start:hover {
+  background-color: palevioletred;
+  border-color: rgb(235, 163, 231);
+  color: white;
+}
+
+
+/* 男女共通 type.PHP */
+/* カラーチャート画像 */
+.container {
+  background-image: url("../images/back-color.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 350vh;
+  margin-top: 50px;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.woman {
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.man {
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
 img {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  
 }
 
-.container h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container h2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container h3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* 女性phpのCSS */
-.woman {
-  width: 70%;
-  height: 70%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.woman-spring {
-  display: flex;
-}
-
-.woman-summer {
-  display: flex;
-}
-
-.woman-autumn {
-  display: flex;
-}
-
-.woman-winter {
-  display: flex;
-}
-
-/* 男性phpのCSS */
-.man {
-  width: 70%;
-  height: 70%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.man-spring {
-  display: flex;
-}
-
-.man-summer {
-  display: flex;
-}
-
-.man-autumn {
-  display: flex;
-}
-
-.man-winter {
-  display: flex;
-}
-
-/* 診断 diagnosis.php */
-.diagnosis {
-  display: flex;
-  justify-content: center;
-  margin-top: 150px;
+/* woman.phpのCSS */
+/* 春 */
+.woman-spring h2 {
+  text-align: center;
   font-size: 60px;
+  color:#65513f;
+  text-decoration:underline double rgb(223, 93, 76);
 }
 
+.woman-spring h3 {
+  text-align: center;
+  font-size: 30px;
+  color:#65513f; 
+}
+
+.woman-spring2 {
+  display: flex;
+  padding: 50px;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+}
+
+/* 画像の縁 */
+.woman-spring2 img {
+  position: relative;
+  background-color: #fff;
+  background-image: linear-gradient(-45deg, rgba(250,215,215,.5) 25%, transparent 25%, transparent 50%, rgba(250,215,215,.5) 50%, rgba(250,215,215,.5) 75%, transparent 75%, transparent 100%),
+  linear-gradient(45deg, rgba(250,215,215,.5) 25%, transparent 25%, transparent 50%,  rgba(250,215,215,.5) 50%, rgba(250,215,215,.5) 75%, transparent 75%, transparent 100%);
+  background-size: 40px 40px;
+  padding: 1em;
+  border-radius: 20em;
+  width: 40%; 
+  height: 40%;
+}
+
+/* 一文字目大きく */
+.wc1 {
+  color: rgb(223, 93, 76);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.woman-spring2 p {
+  color: #65513f;
+  padding: 15px 10px 10px 10px;
+  font-size: 20px;
+  line-height: 40px;
+  margin-top: 15px;
+  margin-left: 30px;
+  text-align: justify;
+}
+
+
+/* 夏 */
+.woman-summer h2 {
+  text-align: center;
+  font-size: 60px;
+  color:#65513f;
+  text-decoration:underline double rgb(97, 187, 190);
+}
+
+.woman-summer h3 {
+  text-align: center;
+  font-size: 30px;
+  color:#65513f;
+}
+
+.woman-summer2 {
+  display: flex;
+  padding: 50px;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+}
+
+.woman-summer2 img {
+  position: relative;
+  background-color: #fff;
+  background-image: linear-gradient(-45deg, rgba(194, 243, 245, 0.5) 25%, transparent 25%, transparent 50%, rgba(194, 243, 245, 0.5) 50%, rgba(194, 243, 245, 0.5) 75%, transparent 75%, transparent 100%),
+  linear-gradient(45deg, rgba(194, 243, 245, 0.5) 25%, transparent 25%, transparent 50%,  rgba(194, 243, 245, 0.5) 50%, rgba(194, 243, 245, 0.5) 75%, transparent 75%, transparent 100%);
+  background-size: 40px 40px;
+  padding: 1em;
+  border-radius: 20em;
+  width: 40%; 
+  height: 40%;
+  margin-left: 60px;
+}
+
+.wc2 {
+  color: rgb(97, 187, 190);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.woman-summer2 p {
+  color: #65513f;
+  padding: 15px 10px 10px 10px;
+  font-size: 20px;
+  line-height: 40px;
+  margin-top: 15px;
+  margin-left: 10px;
+  text-align: justify;
+}
+
+
+/* 秋 */
+.woman-autumn h2 {
+  text-align: center;
+  font-size: 60px;
+  color:#65513f;
+  text-decoration:underline double rgb(223, 156, 57);
+}
+
+.woman-autumn h3 {
+  text-align: center;
+  font-size: 30px;
+  color:#65513f;
+}
+
+.woman-autumn2 {
+  display: flex;
+  padding: 50px;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+}
+
+.woman-autumn2 img {
+  position: relative;
+  background-color: #fff;
+  background-image: linear-gradient(-45deg, rgba(243, 217, 169, 0.5) 25%, transparent 25%, transparent 50%, rgba(243, 217, 169, 0.5) 50%, rgba(243, 217, 169, 0.5) 75%, transparent 75%, transparent 100%),
+  linear-gradient(45deg, rgba(243, 217, 169, 0.5) 25%, transparent 25%, transparent 50%, rgba(243, 217, 169, 0.5) 50%, rgba(243, 217, 169, 0.5) 75%, transparent 75%, transparent 100%);
+  background-size: 40px 40px;
+  padding: 1em;
+  border-radius: 20em;
+  width: 40%; 
+  height: 40%;
+}
+
+.wc3 {
+  color: rgb(223, 156, 57);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.woman-autumn2 p {
+  color: #65513f;
+  padding: 15px 10px 10px 10px;
+  font-size: 20px;
+  line-height: 40px;
+  margin-top: 15px;
+  margin-left: 30px;
+  text-align: justify;
+}
+
+/* 冬 */
+.woman-winter h2 {
+  text-align: center;
+  font-size: 60px;
+  color:#65513f;
+  text-decoration:underline double rgb(219, 54, 156);
+}
+
+.woman-winter h3 {
+  text-align: center;
+  font-size: 30px;
+  color:#65513f;
+}
+
+.woman-winter2 {
+  display: flex;
+  padding: 50px;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+}
+
+.woman-winter2 img {
+  position: relative;
+  background-color: #fff;
+  background-image: linear-gradient(-45deg, rgba(240, 169, 213, 0.5) 25%, transparent 25%, transparent 50%, rgba(240, 169, 213, 0.5) 50%, rgba(240, 169, 213, 0.5) 75%, transparent 75%, transparent 100%),
+  linear-gradient(45deg, rgba(240, 169, 213, 0.5) 25%, transparent 25%, transparent 50%, rgba(240, 169, 213, 0.5) 50%, rgba(240, 169, 213, 0.5) 75%, transparent 75%, transparent 100%);
+  background-size: 40px 40px;
+  padding: 1em;
+  border-radius: 20em;
+  width: 40%; 
+  height: 40%;
+  margin-left: 60px;
+}
+
+.wc4 {
+  color: rgb(219, 54, 156);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.woman-winter2 p {
+  color: #65513f;
+  padding: 15px 10px 10px 10px;
+  font-size: 20px;
+  line-height: 40px;
+  margin-top: 15px;
+  margin-left: 10px;
+  text-align: justify;
+}
+
+
+/* man.phpのCSS */
+/* 春 */
+.man-spring h2 {
+  text-align: center;
+  font-size: 60px;
+  color:#65513f;
+  text-decoration:underline double rgb(148, 211, 90);
+}
+
+.man-spring h3 {
+  text-align: center;
+  font-size: 30px;
+  color:#65513f;
+}
+
+.man-spring2 {
+  display: flex;
+  padding: 50px;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+}
+
+/* 画像の縁 */
+.man-spring2 img {
+  position: relative;
+  background-color: #fff;
+  background: repeating-linear-gradient(-45deg, #d3f3db, #d3f3db 10px, #f1f7f3 0, #f1f7f3 20px);
+  padding: 1em;
+  border-radius: 20em;
+  width: 40%; 
+  height: 40%;
+}
+
+.mc1 {
+  color: rgb(148, 211, 90);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+.man-spring2 p  {
+  color: #65513f;
+  padding: 15px 10px 10px 10px;
+  font-size: 20px;
+  line-height: 40px;
+  margin-left: 30px;
+  text-align: justify;
+}
+
+/* 夏 */
+.man-summer h2 {
+  text-align: center;
+  font-size: 60px;
+  color:#65513f;
+  text-decoration:underline double rgb(176, 141, 185);
+}
+
+.man-summer h3 {
+  text-align: center;
+  font-size: 30px;
+  color:#65513f;
+}
+
+.man-summer2 {
+  display: flex;
+  padding: 50px;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+}
+
+.man-summer2 img {
+  position: relative;
+  background-color: #fff;
+  background: repeating-linear-gradient(-45deg, #efe4f1, #efe4f1 10px, #f2edf3 0, #f2edf3 20px);
+  padding: 1em;
+  border-radius: 20em;
+  width: 40%; 
+  height: 40%;
+  margin-left: 60px;
+}
+
+.mc2 {
+  color: rgb(176, 141, 185);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.man-summer2 p  {
+  color: #65513f;
+  padding: 15px 10px 10px 10px;
+  font-size: 20px;
+  line-height: 40px;
+  margin-left: 10px;
+  text-align: justify;
+}
+
+/* 秋 */
+.man-autumn h2 {
+  text-align: center;
+  font-size: 60px;
+  color:#65513f;
+  text-decoration:underline double rgb(235, 139, 29);
+}
+
+.man-autumn h3 {
+  text-align: center;
+  font-size: 30px;
+  color:#65513f;
+}
+
+.man-autumn2 {
+  display: flex;
+  padding: 50px;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+}
+
+.man-autumn2 img {
+  position: relative;
+  background-color: #fff;
+  background: repeating-linear-gradient(-45deg,rgb(243, 223, 185), rgb(243, 223, 185) 10px, #f8f6f2 0, #f8f6f2 20px);
+  padding: 1em;
+  border-radius: 20em;
+  width: 40%; 
+  height: 40%;
+}
+
+.mc3 {
+  color: rgb(235, 139, 29);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.man-autumn2 p {
+  color: #65513f;
+  padding: 15px 10px 10px 10px;
+  font-size: 20px;
+  line-height: 40px;
+  margin-left: 30px;
+  text-align: justify;
+}
+
+/* 冬 */
+.man-winter h2 {
+  text-align: center;
+  font-size: 60px;
+  color:#65513f;
+  text-decoration:underline double rgb(58, 76, 139);
+}
+
+.man-winter h3 {
+  text-align: center;
+  font-size: 30px;
+  color:#65513f;
+}
+
+.man-winter2 {
+  display: flex;
+  padding: 50px;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+}
+
+.man-winter2 img {
+  position: relative;
+  background-color: #fff;
+  background: repeating-linear-gradient(-45deg, #ccd3f0, #ccd3f0 10px, #eff0f5 0, #eff0f5 20px);
+  padding: 1em;
+  border-radius: 20em;
+  width: 40%; 
+  height: 40%;
+  margin-left: 70px;
+}
+
+.mc4 {
+  color: rgb(58, 76, 139);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.man-winter2 p {
+  color: #65513f;
+  padding: 15px 10px 10px 10px;
+  font-size: 20px;
+  line-height: 40px;
+  margin-left: 10px;
+  text-align: justify;
+}
+
+
+/* diagnosis.php */
+/* 背景と質問 */
+.diagnosis h2 {
+  background-image: url("../images/back-color.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  padding-top: 70px;
+  font-size: 60px;
+  color: #65513f;
+}
+
+/* YES-NOボタン */
 .yes-no {
   display: flex;
   justify-content: center;
-  margin-top: 150px;
-  font-size: 60px;
+  padding-top: 30px;
 }
 
+.yes{  
+  font-size: 60px;
+  margin-top: 70px;
+  margin-right: 150px;
+  display: inline-block;
+  text-decoration: none;
+  background: #ff8181;
+  color: #FFF;
+  width: 250px;
+  height: 250px;
+  line-height: 250px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  overflow: hidden;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #bd6565;
+  transition: .4s;
+}
+
+.yes:hover {
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  border-bottom: none;
+}
+
+.no{
+  font-size: 60px;
+  margin-top: 70px;
+  margin-left: 150px;
+  display: inline-block;
+  text-decoration: none;
+  background: lightskyblue;
+  color: #FFF;
+  width: 250px;
+  height: 250px;
+  line-height: 250px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  overflow: hidden;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px rgb(114, 162, 224);
+  transition: .4s;
+}
+
+.no:hover {
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  border-bottom: none;
+}
+
+.yes1{
+  font-size: 60px;
+  margin-top: 70px;
+  margin-right: 150px;
+  display: inline-block;
+  text-decoration: none;
+  background: #ff8181;
+  color: #FFF;
+  width: 250px;
+  height: 250px;
+  line-height: 250px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  overflow: hidden;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #bd6565;
+  transition: .4s;
+} 
+
+.yes1:hover {
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  border-bottom: none;
+}
+
+.no1{
+  font-size: 60px;
+  margin-top: 70px;
+  margin-left: 150px;
+  display: inline-block;
+  text-decoration: none;
+  background: lightskyblue;
+  color: #FFF;
+  width: 250px;
+  height: 250px;
+  line-height: 250px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  overflow: hidden;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px  rgb(114, 162, 224);
+  transition: .4s;
+}
+
+.no1:hover {
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  border-bottom: none;
+}
+
+
 /* result.php */
+.anata {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #65513f;
+}
+
+.kasen {
+	position: relative;
+	height: 6px;
+	border-width: 0;
+	background-image: -webkit-linear-gradient(left,
+	transparent 0%,rgb(247, 199, 207) 50%,transparent 100%);
+	background-image:         linear-gradient(90deg,
+	transparent 0%,rgb(247, 199, 207) 50%,transparent 100%);
+}
+
 .result-type {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 80px;
+  /* カラーをいれる */
+  padding-top: 70px;
 }
+
 
 .result-img {
   width: 50%;
   height: 50%;
+  margin-top: 40px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  /* 後で囲う？ */
 }
 
 .result-subtitle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #65513f;
+  text-align: center;
+  font-size: 40px;
+  padding: 30px;
 }
 
 .result-body {
-  margin-left: 350px;
+  color: #65513f;
+  font-size: 20px;
+  /* text-align: center; */
+  /* text-align: justify; */
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
 }
 
-.result {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: red;
-  background-color: ivory;
-  border: 1px solid #ebccd1;
-  padding: 10px;
-  margin-bottom: 10px;
+.result-main {
+  width: 800px;
+  margin: 0 auto;
+  margin-bottom: 100px;
 }
 
-.color {
+/* 先頭の文字大きく */
+.result-body:first-letter {
+  font-size: 2em;
+  color: #65513f;
+  font-weight: bold;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
 }
 
 .result-skincolor {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #65513f;
+  font-size: 20px;
+  /* margin-left: 400px; */
+  /* margin-right: 360px; */
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
 }
 
 .result-eyecolor {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #65513f;
+  font-size: 20px;
+  /* margin-left: 400px; */
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
 }
 
 .result-haircolor {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #65513f;
+  font-size: 20px;
+  /* margin-left: 400px; */
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
 }
+
+/* DBとCSS 色変える */
+.red {
+position: relative;
+  background-color: #fff;
+  background-image: linear-gradient(-45deg, rgba(250,215,215,.5) 25%, transparent 25%, transparent 50%, rgba(250,215,215,.5) 50%, rgba(250,215,215,.5) 75%, transparent 75%, transparent 100%),
+  linear-gradient(45deg, rgba(250,215,215,.5) 25%, transparent 25%, transparent 50%,  rgba(250,215,215,.5) 50%, rgba(250,215,215,.5) 75%, transparent 75%, transparent 100%);
+  background-size: 40px 40px;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  width: 800px;
+  color: #65513f;
+  margin-top: 20px;
+}
+
+.lightblue {
+  position: relative;
+  background-color: #fff;
+  background-image: linear-gradient(-45deg, rgba(194, 243, 245, 0.5) 25%, transparent 25%, transparent 50%, rgba(194, 243, 245, 0.5) 50%, rgba(194, 243, 245, 0.5) 75%, transparent 75%, transparent 100%),
+  linear-gradient(45deg, rgba(194, 243, 245, 0.5) 25%, transparent 25%, transparent 50%,  rgba(194, 243, 245, 0.5) 50%, rgba(194, 243, 245, 0.5) 75%, transparent 75%, transparent 100%);
+  background-size: 40px 40px;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  width: 800px;
+  color: #65513f;
+  margin-top: 20px;
+}
+
+.brown {
+  position: relative;
+  background-color: #fff;
+  background-image: linear-gradient(-45deg, rgba(243, 217, 169, 0.5) 25%, transparent 25%, transparent 50%, rgba(243, 217, 169, 0.5) 50%, rgba(243, 217, 169, 0.5) 75%, transparent 75%, transparent 100%),
+  linear-gradient(45deg, rgba(243, 217, 169, 0.5) 25%, transparent 25%, transparent 50%, rgba(243, 217, 169, 0.5) 50%, rgba(243, 217, 169, 0.5) 75%, transparent 75%, transparent 100%);
+  background-size: 40px 40px;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  width: 800px;
+  color: #65513f;
+  margin-top: 20px;
+}
+
+.pink {
+  position: relative;
+  background-color: #fff;
+  background-image: linear-gradient(-45deg, rgba(240, 169, 213, 0.5) 25%, transparent 25%, transparent 50%, rgba(240, 169, 213, 0.5) 50%, rgba(240, 169, 213, 0.5) 75%, transparent 75%, transparent 100%),
+  linear-gradient(45deg, rgba(240, 169, 213, 0.5) 25%, transparent 25%, transparent 50%, rgba(240, 169, 213, 0.5) 50%, rgba(240, 169, 213, 0.5) 75%, transparent 75%, transparent 100%);
+  background-size: 40px 40px;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  width: 800px;
+  color: #65513f;
+  margin-top: 20px;
+}
+
+.yellowgreen {
+  position: relative;
+  background-color: #fff;
+  background: repeating-linear-gradient(-45deg, #d3f3db, #d3f3db 10px, #f1f7f3 0, #f1f7f3 20px);
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  width: 800px;
+  color: #65513f;
+  margin-top: 20px;
+}
+
+.purple {
+  position: relative;
+  background-color: #fff;
+  background: repeating-linear-gradient(-45deg, #efe4f1, #efe4f1 10px, #f2edf3 0, #f2edf3 20px);
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  width: 800px;
+  color: #65513f;
+  margin-top: 20px;
+}
+
+.orange {
+  position: relative;
+  background-color: #fff;
+  background: repeating-linear-gradient(-45deg,rgb(243, 223, 185), rgb(243, 223, 185) 10px, #f8f6f2 0, #f8f6f2 20px);
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  width: 800px;
+  color: #65513f;
+  margin-top: 20px;
+}
+
+.blue {
+  position: relative;
+  background-color: #fff;
+  background: repeating-linear-gradient(-45deg, #ccd3f0, #ccd3f0 10px, #eff0f5 0, #eff0f5 20px);
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  width: 800px;
+  color: #65513f;
+  margin-top: 20px;
+}
+
 
 
